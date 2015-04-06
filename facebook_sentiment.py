@@ -14,7 +14,9 @@ in the write up.
 	Also clean up your githup folder organization, and get get rid of random files like 
 	"yelp_goofing" and empty files like "text_mining" or the empty folder "Facebook-Sentiment-Analysis)
 +CheckIn: yes
-+Total: 4.25/5"""This program imports my friends' statuses from facebook and 
++Total: 4.25/5"""
+
+"""This program imports my friends' statuses from facebook and 
 groups them via MDS according to Pattern's sentiment axis"""
 from pattern.web import *
 from pattern.en import *
@@ -89,6 +91,12 @@ def sentiment_map():
 		plot(sentiment[i-1],sentiment[i],'o')
 		i += 1
 	show()
+	
+	#Oooh, this is really messy to a reader. Check my comment in the above function on instead organizing
+	# sentiment as a list of tuples. This would really allow you to simplify this loop by just doing:
+
+	# for status in sentiment:
+	# 	plot(sentiment[0], sentiment[1], 'o')
 
 if __name__=="__main__":
 	sentiment_map()
