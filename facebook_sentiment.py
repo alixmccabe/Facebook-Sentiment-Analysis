@@ -1,4 +1,20 @@
-"""This program imports my friends' statuses from facebook and 
+"""Hey, your organization makes it really hard for me to figure out what your project is.
+I first checked "Facebook_Sentiment_Analysis inside your comp_art repo, and it was empty.
+I then found facebook_sentiment files inside your comp_art repo, which was old, and I almost graded that.
+I finally found this and your write up though, so you had everything - it was just hard to find.
+Plese help yourself and me by cleaning your github repos and folder organizations.
+
+It would also be really helpful to label your figures in the code itself, though I see it is there
+in the write up.
+
++Functionality: 5/5
++Documentation: 4/5 (You might consider letting the users know to run import_friends first before running main in 
+	order to pickle the file first. Or even better, create a seperate main function for "first_run")
++Style: 4/5 (Check if you're making your code unessarily hard to read, as I explained in your last function.
+	Also clean up your githup folder organization, and get get rid of random files like 
+	"yelp_goofing" and empty files like "text_mining" or the empty folder "Facebook-Sentiment-Analysis)
++CheckIn: yes
++Total: 4.25/5"""This program imports my friends' statuses from facebook and 
 groups them via MDS according to Pattern's sentiment axis"""
 from pattern.web import *
 from pattern.en import *
@@ -54,6 +70,10 @@ def sentiment_gage():
 			sent += sentiment(line)
 	return sent
 
+	#Allright, what makes more sense to me, is instead of returning a giant list of sentiment values all jumbled together,
+	# to rather return a list of tuples, where each tuple represents a status, and is (positivity, objectivity) 
+	# Organizing it that way will make more sense to readers, and will allow you to then loop 
+	# through the data in a more clear way
 
 def sentiment_map():
 	"""
